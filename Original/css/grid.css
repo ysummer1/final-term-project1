@@ -1,0 +1,56 @@
+/*this is my grid layout*/
+*, *::after, *::before{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+
+}
+
+[class^='grid-col-']{
+
+	float: left;
+	padding: 0;
+	text-align: center;
+
+}
+
+.grid-col-5of10{
+	width: 50%;
+
+
+}
+.grid-col-2of10{
+	width: 20%;
+
+
+}
+.grid-row::after{
+
+display: block;
+clear: both;
+content: "";
+
+}
+
+@media (max-width: 50em){
+	.grid-col-5of10{
+		width: 100%;
+
+	}	
+	.grid-col-2of10{
+		width: 33.333%;
+
+	}
+
+
+}
+@media (max-width: 31em){
+
+	.grid-col-2of10{
+		width: 100%;
+
+	}
+
+
+}
+
